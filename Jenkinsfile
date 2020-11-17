@@ -13,7 +13,6 @@ stages {
             sh 'mvn -B -DskipTests clean package'
         }
     }
-}
     stage('Test') {
         steps {
             sh 'mvn test'
@@ -29,5 +28,6 @@ stages {
                 sh './jenkins/scripts/deliver.sh'
             }
         }
+}
 
 }
